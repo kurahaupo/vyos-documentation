@@ -32,21 +32,29 @@ msgstr "**datos de usuario**: incluye comandos vyos."
 msgid "**user-data** file must start with ``#cloud-config`` and contains vyos-commands. For example:"
 msgstr "El archivo **datos de usuario** debe comenzar con ``#cloud-config`` y contiene comandos vyos. Por ejemplo:"
 
-#: ../../automation/vyos-api.rst:285
+#: ../../automation/vyos-api.rst:322
 msgid "/config-file"
 msgstr "/archivo de configuración"
 
-#: ../../automation/vyos-api.rst:228
+#: ../../automation/vyos-api.rst:265
 msgid "/configure"
 msgstr "/configurar"
 
-#: ../../automation/vyos-api.rst:209
+#: ../../automation/vyos-api.rst:246
 msgid "/generate"
 msgstr "/generar"
 
-#: ../../automation/vyos-api.rst:147
+#: ../../automation/vyos-api.rst:184
 msgid "/image"
 msgstr "/imagen"
+
+#: ../../automation/vyos-api.rst:165
+msgid "/poweroff"
+msgstr "/poweroff"
+
+#: ../../automation/vyos-api.rst:147
+msgid "/reboot"
+msgstr "/reboot"
 
 #: ../../automation/vyos-api.rst:129
 msgid "/reset"
@@ -56,7 +64,7 @@ msgstr "/reiniciar"
 msgid "/retrieve"
 msgstr "/recuperar"
 
-#: ../../automation/vyos-api.rst:185
+#: ../../automation/vyos-api.rst:222
 msgid "/show"
 msgstr "/espectáculo"
 
@@ -258,7 +266,7 @@ msgstr "Para configurar y habilitar la API, consulte :ref:`http-api`"
 msgid "For example, get the addresses of a ``dum0`` interface."
 msgstr "Por ejemplo, obtenga las direcciones de una interfaz ``dum0``."
 
-#: ../../automation/vyos-api.rst:189
+#: ../../automation/vyos-api.rst:226
 msgid "For example, show which images are installed."
 msgstr "Por ejemplo, muestre qué imágenes están instaladas."
 
@@ -487,11 +495,11 @@ msgstr "Sal"
 msgid "Salt master configuration:"
 msgstr "Configuración maestra de sal:"
 
-#: ../../automation/vyos-api.rst:307
+#: ../../automation/vyos-api.rst:344
 msgid "Save a running configuration to a file."
 msgstr "Guarde una configuración en ejecución en un archivo."
 
-#: ../../automation/vyos-api.rst:289
+#: ../../automation/vyos-api.rst:326
 msgid "Save a running configuration to the startup configuration. When you don't specify the file when saving, it saves to ``/config/config.boot``."
 msgstr "Guarde una configuración en ejecución en la configuración de inicio. Cuando no especifica el archivo al guardar, se guarda en ``/config/config.boot``."
 
@@ -523,7 +531,7 @@ msgstr "Estructura de archivos"
 msgid "System Defaults/Fallbacks"
 msgstr "Valores predeterminados/alternativos del sistema"
 
-#: ../../automation/vyos-api.rst:264
+#: ../../automation/vyos-api.rst:301
 msgid "The API pushes every request to a session and commit it. But some of VyOS components like DHCP and PPPoE Servers, IPSec, VXLAN, and other tunnels require full configuration for commit. The endpoint will process multiple commands when you pass them as a list to the ``data`` field."
 msgstr "La API envía cada solicitud a una sesión y la confirma. Pero algunos de los componentes de VyOS, como los servidores DHCP y PPPoE, IPSec, VXLAN y otros túneles, requieren una configuración completa para la confirmación. El punto final procesará múltiples comandos cuando los pase como una lista al campo ``datos``."
 
@@ -535,11 +543,11 @@ msgstr "El script ``/config/scripts/vyos-postconfig-bootup.script`` se llama en 
 msgid "The ``/config/scripts/vyos-preconfig-bootup.script`` script is called on boot before the VyOS configuration during boot process."
 msgstr "El script ``/config/scripts/vyos-preconfig-bootup.script`` se llama en el arranque antes de la configuración de VyOS durante el proceso de arranque."
 
-#: ../../automation/vyos-api.rst:187
+#: ../../automation/vyos-api.rst:224
 msgid "The ``/show`` endpoint is to show everything in the operational mode."
 msgstr "El punto final ``/show`` es mostrar todo en el modo operativo."
 
-#: ../../automation/vyos-api.rst:211
+#: ../../automation/vyos-api.rst:248
 msgid "The ``generate`` endpoint run a ``generate`` command."
 msgstr "El extremo ``generar`` ejecuta un comando ``generar``."
 
@@ -568,7 +576,7 @@ msgstr "El archivo predeterminado se ve así:"
 msgid "The easiest way to configure the system via user-data is the Cloud-config syntax described below."
 msgstr "La forma más fácil de configurar el sistema a través de los datos del usuario es la sintaxis de configuración de la nube que se describe a continuación."
 
-#: ../../automation/vyos-api.rst:287
+#: ../../automation/vyos-api.rst:324
 msgid "The endpoint ``/config-file`` is to save or load a configuration."
 msgstr "El punto final ``/config-file`` es para guardar o cargar una configuración."
 
@@ -604,11 +612,11 @@ msgstr "Esta sección necesita mejoras, ejemplos y explicaciones."
 msgid "This will result in the following error message: ``Set failed`` If this happens, a reboot is required to be able to edit the config manually again."
 msgstr "Esto dará como resultado el siguiente mensaje de error: ``Establecimiento fallido`` Si esto sucede, se requiere reiniciar para poder editar la configuración manualmente nuevamente."
 
-#: ../../automation/vyos-api.rst:323
+#: ../../automation/vyos-api.rst:360
 msgid "To Load a configuration file."
 msgstr "Para cargar un archivo de configuración."
 
-#: ../../automation/vyos-api.rst:149
+#: ../../automation/vyos-api.rst:186
 msgid "To add or delete an image, use the ``/image`` endpoint."
 msgstr "Para agregar o eliminar una imagen, use el punto final ``/image``."
 
@@ -624,6 +632,10 @@ msgstr "Para obtener la configuración completa, pase una lista vacía al campo 
 msgid "To include VyOS specific functions and aliases you need to ``source /opt/vyatta/etc/functions/script-template`` files at the top of your script."
 msgstr "Para incluir funciones y alias específicos de VyOS, necesita archivos ``fuente /opt/vyatta/etc/functions/script-template`` en la parte superior de su secuencia de comandos."
 
+#: ../../automation/vyos-api.rst:149
+msgid "To initiate a reboot use the ``reboot`` endpoint."
+msgstr "To initiate a reboot use the ``reboot`` endpoint."
+
 #: ../../automation/command-scripting.rst:128
 msgid "To make sure that a script is not accidentally called without the ``vyattacfg`` group, the script can be safeguarded like this:"
 msgstr "Para asegurarse de que una secuencia de comandos no se llame accidentalmente sin el grupo ``vyattacfg``, la secuencia de comandos se puede proteger de esta manera:"
@@ -631,6 +643,10 @@ msgstr "Para asegurarse de que una secuencia de comandos no se llame accidentalm
 #: ../../automation/vyos-api.rst:79
 msgid "To only get a part of the configuration, for example ``system syslog``."
 msgstr "Para obtener solo una parte de la configuración, por ejemplo ``system syslog``."
+
+#: ../../automation/vyos-api.rst:167
+msgid "To power off the system use the ``poweroff`` endpoint."
+msgstr "To power off the system use the ``poweroff`` endpoint."
 
 #: ../../automation/cloud-init.rst:223
 msgid "Troubleshooting"
@@ -736,11 +752,11 @@ msgstr "Sin proxy, requiere configuración minion de VyOS y admite datos en modo
 msgid "Without proxy it requires VyOS minion configuration and supports op-mode data:"
 msgstr "Sin proxy, requiere la configuración de minion de VyOS y admite datos en modo operativo:"
 
-#: ../../automation/vyos-api.rst:230
+#: ../../automation/vyos-api.rst:267
 msgid "You can pass a ``set``, ``delete`` or ``comment`` command to the ``/configure`` endpoint."
 msgstr "Puede pasar un comando ``set``, ``delete`` o ``comment`` al extremo ``/configure``."
 
-#: ../../automation/vyos-api.rst:249
+#: ../../automation/vyos-api.rst:286
 msgid "``delete`` a single command"
 msgstr "``borrar`` un solo comando"
 
@@ -748,7 +764,7 @@ msgstr "``borrar`` un solo comando"
 msgid "``seed.iso`` was previously created in directory ``/tmp/``. It's necessary to move it to ``/var/lib/vz/template/iso``"
 msgstr "``seed.iso`` se creó previamente en el directorio ``/tmp/``. Es necesario moverlo a ``/var/lib/vz/template/iso``"
 
-#: ../../automation/vyos-api.rst:233
+#: ../../automation/vyos-api.rst:270
 msgid "``set`` a single command"
 msgstr "``establecer`` un solo comando"
 
@@ -764,7 +780,7 @@ msgstr "Credenciales ``vyos&#39;&#39;/``vyos&#39;&#39; si no hay otras especific
 msgid "``write_files`` - this module allows to insert any files into the filesystem before the first boot, for example, pre-generated encryption keys, certificates, or even a whole ``config.boot`` file. The format is described in the cloudinit documentation `Cloud-init-write_files`_."
 msgstr "``write_files``: este módulo permite insertar cualquier archivo en el sistema de archivos antes del primer arranque, por ejemplo, claves de cifrado generadas previamente, certificados o incluso un archivo ``config.boot`` completo. El formato se describe en la documentación de cloudinit `Cloud-init-write_files`_."
 
-#: ../../automation/vyos-api.rst:151
+#: ../../automation/vyos-api.rst:188
 msgid "add an image"
 msgstr "Añadir una imagen"
 
@@ -784,7 +800,7 @@ msgstr "cloud-init registra en /var/log/cloud-init.log. Este archivo puede ser �
 msgid "commands.txt"
 msgstr "comandos.txt"
 
-#: ../../automation/vyos-api.rst:168
+#: ../../automation/vyos-api.rst:205
 msgid "delete an image, for example ``1.3-rolling-202006070117``"
 msgstr "borrar una imagen, por ejemplo ``1.3-rolling-202006070117``"
 
